@@ -1,0 +1,25 @@
+1 - Conteudos - nav bar e alterar cor de coisas prontas!
+
+
+
+
+
+Adicionei a navbar, e agora vou trabalhar com as cores do boots
+Posso ir la no 'Customize' e ir em 'Color' e ver os padrãos
+Pra modificar algo ja pronto, devo adicionar o que quero junto ao nome da class, exemplo
+
+exp de class "original" = navbar navbar-expand navbar-dark bg-dark
+exp modificar = navbar navbar-expand navbar-dark 'bg-primary'
+
+poderia modificar as cores do texto mudando aquele penultimo parametro!
+
+aqui por exemplo consegui modificar a cor de algo ja pronto!
+
+outro exemplo, adicionado a cor ja pronta, eu mofiquei o BG, fazendo isso só adicionando a classe certa
+<body class="bg-dark">
+
+mais um adentro - pra eu usar uma cor que eu queira, que não tenha lá no bootstrap
+exp 
+
+
+
