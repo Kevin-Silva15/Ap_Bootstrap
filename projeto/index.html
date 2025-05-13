@@ -1,59 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <title> Bootstrap!</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <title> Bootstrap!</title>
 </head>
+
 <body class="bg-dark" style="color:white;">
-  <nav class="navbar navbar-expand navbar-dark mb-5" style="background-color: blueviolet;" aria-label="Second navbar example"> 
-    
+  <nav class="navbar navbar-expand navbar-dark mb-5" style="background-color: blueviolet;"
+    aria-label="Second navbar example">
+
     <div class="container">
-       <a class="navbar-brand" href="#">Always expand</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation"> 
-          <span class="navbar-toggler-icon"></span> 
-        </button> 
-        <div class="collapse navbar-collapse" id="navbarsExample02"> 
-          <ul class="navbar-nav me-auto"> 
-            <li class="nav-item">
-               <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li> 
-               <li class="nav-item">
-                 <a class="nav-link" href="#">Link</a>
-                 </li> </ul> 
-                 <form role="search">
-                   <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                  </form>
-          </div>
+      <a class="navbar-brand" href="#">Always expand</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02"
+        aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExample02">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+        </ul>
+        <form role="search">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+        </form>
       </div>
+    </div>
   </nav>
-  
+
   <div class="container">
     <div class="row">
       <div class="col-md-8 mt-5">
         <h1>Criando um site bonito e responsivo<br>
-           com Bootstrap!</h1>
-      <p>Bootstrap é bem legal, podendo ser personalizado a depender das necessidades/vontades, é uma baita ferramente, gostei muito!. Percebi que faz isso usando muito bem os grids e com diversos códigos de JavaScript!</p>
-      <a href="#" class="btn btn-primary btn-lg p-3 me-3" style="background-color: blueviolet; border:none" >Começar</a>
-      <button type="button" class="btn btn-outline-secondary btn-lg p-3">Instalar</button>
-    </div>
-      
+          com Bootstrap!</h1>
+        <p>Bootstrap é bem legal, podendo ser personalizado a depender das necessidades/vontades, é uma baita
+          ferramente, gostei muito!. Percebi que faz isso usando muito bem os grids e com diversos códigos de
+          JavaScript!</p>
+        <a href="#" class="btn btn-primary btn-lg p-3 me-3"
+          style="background-color: blueviolet; border:none">Começar</a>
+        <button type="button" class="btn btn-outline-secondary btn-lg p-3">Instalar</button>
+      </div>
+
       <div class="col-md-4 mt-5">
         <img class="img-fluid" src="https://picsum.photos/500/300" alt="sl">
       </div>
-      
+
     </div>
 
     <div class="col-md-12 mt-5">
-      <img class="img-fluid float-end" src="https://picsum.photos/250/250" alt="sl2">
-    </div>
-  </div>
-  
+      <div class="row">
+        <div class="col-6">
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome Completo</label>
+            <input type="text" class="border border-primary form-control form-control-lg" id="exampleFormControlInput1"
+              placeholder="Digite seu nome">
+          </div>
 
-  
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+        </div>
+        <div class="col">
+          <div class="mb-3">
+            <label for="email" class="form-label">Digite o seu Email</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@examplo.com">
+          </div>
+
+        </div>
+        <div class="col">
+          <div class="mb-3">
+            <label for="Senha" class="form-label">Digite a sua Senha</label>
+            <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Senha">
+          </div>
+
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Qual o motivo do contato</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="formFile" class="form-label">Enviar arquivo!</label>
+      <input class="form-control form-control-lg" type="file" id="formFile" multiple>
+    </div>
+    <br>
+    <p>Selecione a sua cor favorita!</p>
+    <label for="exampleColorInput" class="form-label">Cores</label>
+<input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

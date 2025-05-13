@@ -75,6 +75,122 @@ olhando na documentação - content> imagens - consego ver as coisas certinhas, 
   <p class="fs-1">Esse é o fs-1 </p>
 </div>
 <hr>
+<div class="container">
+  <h2>Tabelas!</h2>
+  <table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td class="table-primary">Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>John</td>
+      <td>Doe</td>
+      <td>@social</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Com as tebalas posso mudar as cores dela, usando "table-dark" por exemplo<br>
+table class="table table-dark" /table> - assim é possivel modificar a cor da tabela!<br>
+Usando o "Striped" - conseguimos tbm deixar a tabela em "zebra" as cores no caso <br>
+Podemos colocar cores em celulas especificas - colocando a uma classe na celula, no caso na "td"
+<br>td class="table-primary"<br>
+</p>
+</div>
+<hr>
+<div class="container">
+  <h2><strong>Formularios!!!</strong></h2>
+<p>Uma das classes principais ao se trarar Formularios é a "form-control", ela determina o comportamentos dos formularios<br>
+Na documentação do bootstrap, podemos ver sobre o tamanho dela, desbilitar algum campo.<br>
+Tamanho - "form-control-lg" para grande e assim adiante, "sm" para pequeno<br>
+</p>
+<br>
+<h3>File Inputs!</h3>
+<p>
+Trabalhar com formularios que recebem aqurivos do úsuario!
+<br>Podemos passar a palavra "multiple" no final do codigo, para que o input receba mais de um aqurivos
+<br>"input class="form-control" type="file" id="formFile" (multiple)" - destaquei o multiple com (), só por motivos de explicação!
+<br>
+</p>
+ <div class="mb-3">
+  <label for="formFile" class="form-label">Default file input example</label>
+  <input class="form-control" type="file" id="formFile" multiple>
+</div>
+<br>
+ <label for="exampleColorInput" class="form-label">Cores</label>
+<input type="color" class="form-control bg-dark form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
+<p>Com esse formulario de cor, podemos enviar a cor que foi selecionado pelo usuario, o campo de value, fica relativo ao que for esccolhido, muito legal né?</p>
+<br>
+<h2>Datalist</h2>
+<p>Tipo o campo select, porem com o detalhe de ter uma lista que ja vai oderencendo por usuario</p>
+
+<label for="exampleDataList" class="form-label">Datalist de frutas</label>
+<input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+<datalist id="datalistOptions">
+  <option value="Banana">
+  <option value="Goiaba">
+  <option value="Uva">
+  <option value="Maracujá">
+  <option value="Tomate">
+</datalist>
+<p>Voce vai escrevendo e ja vai sugerindo as opções</p>
+<p>O "ruim" desse é que em alguns navegaroes antigos e alguns da firefox, o datalist, pode não funcionar corretamente </p>
+<br>
+<h2>Campo select</h2>
+<select class="form-select" aria-label="Default select example">
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+<br><br>
+<p>No bootstrap,podemos usar a propriedade que nos permite selecionar mais de uma opção, criando uma array la pro back, mas enfim</p>
+<select class="form-select" multiple aria-label="Multiple select example">
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+<p>Apos isso, é so segui a documentação, e o que ja apredendemos e modificar conforme nossa vontade!</p>
+<br>
+<h2>Checks / radios / switches</h2>
+<p>
+  Lembrando a diferença entre os dois, radio é só um ou outro, ja o checks, podemos escolher mais de uma opção!<br>
+  switches são aqueles que podemos ligar e desligar, tipo aqueles botoes de ativar modo escuro ou não!<br>
+  Só olha lá na documentação é pegar o que for mais conveniente, não vouu trazer aqui, pois não tem segredo!
+</p>
+<h2>Range</h2>
+<p>Podemos usar por exeplo pra criar filtro de produtos, com um certo valor e tals</p>
+<label for="customRange1" class="form-label">Examplo de range</label>
+<input type="range" class="form-range" min="0" max="5" id="customRange1">
+<p>Aqui ele vai aceitar valores entre 1 á 5</p>
+</div>
+<br><br>
+<hr>
+<div class="container">
+<h2>Imput Grup!</h2>
+
+
+</div>
+
 
 
 
