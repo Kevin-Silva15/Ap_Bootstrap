@@ -22,4 +22,119 @@ mais um adentro - pra eu usar uma cor que eu queira, que não tenha lá no boots
 exp 
 
 
+<aula 11>
+
+ <div class="col-md-12 mt-5">
+      <div class="row">
+        <div class="col-6">
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome Completo</label>
+            <input type="text" class="border border-primary form-control form-control-lg" id="exampleFormControlInput1"
+              placeholder="Digite seu nome">
+          </div>
+
+        </div>
+        <div class="col">
+          <div class="mb-3">
+            <label for="email" class="form-label">Digite o seu Email</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@examplo.com">
+          </div>
+
+        </div>
+        <div class="col">
+          <div class="mb-3">
+            <label for="Senha" class="form-label">Digite a sua Senha</label>
+            <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Senha">
+          </div>
+
+        </div>
+
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Recipient’s username" aria-label="Recipient’s username"
+            aria-describedby="button-addon2">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+        </div>
+
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Qual o motivo do contato</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="formFile" class="form-label">Enviar arquivo!</label>
+      <input class="form-control form-control-lg" type="file" id="formFile" multiple>
+    </div>
+    <br>
+
+    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+      <button type="button" class="btn btn-danger">Deletar</button>
+      <button type="button" class="btn btn-warning">Editar</button>
+      <button type="button" class="btn btn-success">Salvar</button>
+    </div>
+    <br><br>
+    <p>Selecione a sua cor favorita!</p>
+    <label for="exampleColorInput" class="form-label">Cores</label>
+    <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c"
+      title="Choose your color">
+
+    <h2>Perguntas Frequentes</h2>
+
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button bg-dark text-white" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Opção 01
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the first item’s accordion body.</strong> It is shown by default, until the collapse plugin
+            adds the appropriate classes that we use to style each element. These classes control the overall
+            appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
+            CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the
+            <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Opção 02
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the collapse
+            plugin adds the appropriate classes that we use to style each element. These classes control the overall
+            appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
+            CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the
+            <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Opção 03
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin
+            adds the appropriate classes that we use to style each element. These classes control the overall
+            appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
+            CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the
+            <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 

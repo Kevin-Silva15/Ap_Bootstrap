@@ -187,8 +187,225 @@ Trabalhar com formularios que recebem aqurivos do úsuario!
 <hr>
 <div class="container">
 <h2>Imput Grup!</h2>
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Recipient’s username" aria-label="Recipient’s username" aria-describedby="button-addon2">
+  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+</div>
+<p>Conseguimos colocar informações mais uteis nos inputs, dar informações mais claras ao usuario e diversas opções, vale a pena voltar a atenção para esse quesito!<br>
+Nesse exemplo ai, coloquei um imput grup que vem com um botão, que posso usar justamente para buscar algo na pagina e etc...<br>
+Poderia usar tbm um imput grup que por exemplo, completasse alguma informação, tipo esse exemplo em seguida:</p>
+<div class="input-group mb-3">
+  <span class="input-group-text">R$</span>
+  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+  <span class="input-group-text">.00</span>
+</div>
+<p>Aqui por exemplo que completo a informação da moeda e dos centavos!</p>
+</div>
+<hr>
+<div class="container">
+  <h2>Floating Labels</h2>
+  <p>Serve para dar um efeito nas nossas labels, para elas ficarem dentro do campo input, e quando o usuario clicar no input, o label se redirecionar para cima, eu particulamente gosto muito disso!</p>
+  <div class="form-floating mb-3">
+  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+  <label for="floatingInput">Email address</label>
+</div>
+</div>
+<hr>
+<h1 style="text-align: center;">Entrandos na aba dos Componentes</h1>
+<hr>
+<div class="container">
+  <h2>Accordion</h2>
+  <p>Podemos usar eles, pra economizar espaço, quando queresmos colocar muitas informações usando pouco espaço<br>
+  Muito facil de usar, é praticamente um copia e cola, e mudar as informações de dentro</p>
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Accordion Item #1
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the first item’s accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Accordion Item #2
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Accordion Item #3
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+</div>
+<p>Um exemplo de uso, é para "Perguntas frequentes", por exemplo</p>
+<p>Pra mudar o bg, do botão ao ser acionado, vamos procurar no html, os botões, e nas classes deles, a gente coloca o "bg+a cor que queremos"<br>
+ button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse"<br>
+            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><br>
+            Opção 03<br>
+  button><br>
+</p>
+</div>
+<hr>
+<div class="container">
+  <h2>Alerts</h2>
+  <p>Bem simples, uma ferramenta visual basica</p>
+  <div id="alerta" class="d-none alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Boa escolha!</strong> Iniciando Instalação, aguarde!
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<button onclick="mostrarAlerta()" type="button" class="btn btn-outline-secondary btn-lg p-3">Instalar</button>
+<p>Explicação, o que aconteceu, peguei o visual da caixa de alerta ja pronto e so adicionei que o displey dele ia ser none, usando o "d-none", la no Boot, depois eu dei um "id" para esse alerta,<br>
+Apos isso eu fui no botão que eu queria que fosse o que ativasse o alerta, e fiz um event onclick com ele, chamando a função que fui construir no js.<br>
+Por ultimo, fiz o script em js, peagando o id, e usando o ".toggle" para adicionar ou remover uma coisa especifica da class do item, que no caso foi o "d-none"<br>
+o d-none - é o displei, do item, pra tornar ele visivel ou não, é pronto</p>
+<br><br>
+<p>Dica pra uso, em formularios, quando um usuario errar algo no formulario, ou quando ele acertar tbm, ou pra informar que algo esta acontecendo, e que é pra ele esperar!</p>
+</div>
+<hr>
+<div class="container">
+  <h2>Badges / Breadcrumb e Button Group</h2>
+  <p>São as marcas que ficam em botões e em outras coisas <br> Tipo quando mostrar quantas coisas foram colocadas em um carrinho <br>
+  Top, isso é bemm legal<br> Exemplo:</p>
+  
+<button type="button" class="btn btn-primary position-relative">
+  Inbox
+  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+    99+
+    <span class="visually-hidden">Quantidade de msg</span>
+  </span>
+</button>
+<p>Aqui posso colocar um var, ali pra variar o numero das notificações, baseadas em outras ações, muito top!</p>
+<br><br>
+<h2>Breadcrumbs</h2>
+<p>Serve pra fazemos um caminho de navegação, e informar qual pagina estamos e etc</p>
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item active" style="color: white;" aria-current="page">Segunda pagina</li>
+  </ol>
+</nav>
+<hr>
+<h2>Button Grup</h2>
+<p>Grupo de botões!</p>
+<div class="btn-group" role="group" aria-label="Basic mixed styles example">
+  <button type="button" class="btn btn-danger">Deletar</button>
+  <button type="button" class="btn btn-warning">Editar</button>
+  <button type="button" class="btn btn-success">Salvar</button>
+</div>
+<p>Como  o nome ja deixa bem claro, é um grupo de botões, só ver la na documentação do boot, e terá varias formas de utilização, basta adequadar á sua necessidades!</p>
+</div>
+<hr>
+<div class="container">
+  <h2>Cards!</h2>
+  <p>Servem tanto pra fazer cards, com fotos, como tbm pra usarem como contonor em algum intem</p>
+  <p>Olhando a documentação,lá podemos usar card em cima, em baixo, etc, lá tem varios tipos de cars, e podemos personalizar e tratar da forma quisermos<br>
+  Tem tbm o cards groups, que é pra ser um grupo de cards<br>
+  <strong>!-----Tem que se atentar para deixar os cards do mesmo tamanho, que é ussando o "h-100", que é pra deixar os cards alinhados e do mesmo tamanho do card que tiver o maior tamanho------!</strong>
+</p>
+<p>Alguns exemplos basicos</p>
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="..." class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
 
+<div class="card border-info mb-3" style="max-width: 18rem;">
+  <div class="card-header">Header</div>
+  <div class="card-body">
+    <h5 class="card-title">Info card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+  </div>
+</div>
+<hr>
+<div class="card">
+  <div class="card-body">
+    Usando esse codigo base, <br>
+    div class="card"><br>
+    div class="card-body"><br>
+    This is some text within a card body.<br>
+    div><br>
+    div><br>
+    Eu consigo, colocar tudo, como se fosse um card
+  </div>
+</div>
+</div>
+<hr>
+<div class="container">
+  <h2>Carousel</h2>
+  <p>Slides!</p>
+  <p>Tem varias opções, só escolher uma</p>
+<div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="img-fluid" src="https://picsum.photos/2000/500" alt="sl">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="img-fluid" src="https://picsum.photos/2000/500" alt="sl">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="img-fluid" src="https://picsum.photos/2000/500" alt="sl">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<p>Da pra usar isso de varias maneiras, como uma home por exemplo que fique de fundo</p>
+</div>
+<hr>
+<div class="container">
+  <h2>Collapse e Dropdown</h2>
 
+  
 </div>
 
 
@@ -196,6 +413,19 @@ Trabalhar com formularios que recebem aqurivos do úsuario!
 
 
 
+
+
+
+
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <script>
+      function mostrarAlerta(){
+        var alerta = document.getElementById('alerta');
+        alerta.classList.toggle('d-none')
+      }
+    </script>
 </body>
 </html>
