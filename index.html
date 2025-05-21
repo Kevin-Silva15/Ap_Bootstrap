@@ -537,85 +537,282 @@
   <div class="container">
     <h2>Modal</h2>
     <p>São tipo Janelas de alerta, é bem legal, foi a que eu usei, no projeto de NODE c/ CRUD</p>
-    <p>Boa dica é colocar os Modal, lá em baixo, perto dos Scripts, por questão de organizações, e por Modais, serem praticamente novas paginas!</p>
+    <p>Boa dica é colocar os Modal, lá em baixo, perto dos Scripts, por questão de organizações, e por Modais, serem
+      praticamente novas paginas!</p>
     <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Ativar o Modal aqui
-</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      Ativar o Modal aqui
+    </button>
 
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Understood</button>
+          </div>
+        </div>
       </div>
-      <div class="modal-body">
-        ...
+    </div>
+    <hr>
+
+    <p>Se eu quiser chamar um Modal, usando links, tenho que colocar assim<br>
+      a href="#exampleModal" data-bs-toggle="modal" - isso claro, fora a class, é ali no href, eu coloco o id dql do
+      Modal que eu quero que aparece, mas tenho que usar o # junto</p>
+    <a href="#exampleModal" data-bs-toggle="modal" class="btn btn-primary btn-lg p-3 me-3"
+      style="background-color: blueviolet; border:none">Ativar Modal, com link!</a>
+    <hr>
+    <p>Fazer com que um Modal, apareça, com um determinado tempo!<br>
+      const Modal = new bootstrap.Modal(document.getElementById('staticBackdrop'),{});<br>
+      setTimeout(function() {Modal.show();}, 10000)<br>
+      <br>Lá no site do boot, tem as funções especificas, pra tratar o modal com js.
+    </p>
+  </div>
+  <hr>
+  <div class="container">
+    <h2>Tabs!</h2>
+    <p>Abas!</p>
+    <p>Pra colocar abas dentro de uma pagina, em que cada aba, tenha um conteudo diferente em cada um
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button"
+          role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button"
+          role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button"
+          role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane"
+          type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Disabled</button>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+        Essa é a home</div>
+      <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+        Profile</div>
+      <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+        Contato</div>
+      <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
+        Desativado</div>
+    </div>
+    <br>
+    <p>Vamos entender, cada "li" é aba que, e ela esta ligado com o div que vai aparecer, atraves do id, usando o target
+      e tals e apontando o id usando o #+(Nome do Id)</p>
+    Posso usar isso aqui, pra fazer os dados lá do banco de dados que eu quero, na pagina de tabela lá da PullTex!
+    </p>
+
+  </div>
+  <hr>
+  <div class="container">
+    <h2>OffCanvas</h2>
+    <p>O menu lateral, aqueles que ficam escondidos</p>
+    <p>Bem parecido com a utilização do modal, com os target e com os id
+      <br> Tem como colocar OffCanvas, que venha de qualquer lado<br>
+      Tem os que bloqueam intenração com o resto da pagina, e outros que permitem<br>
+      Veja esse exxemplo ai;<br>
+      <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+        aria-controls="offcanvasExample">
+        Link with href
+      </a>
+    </p>
+    <p>Assim como o modal, podemos criar o off, e deixalo lá em baixo no codigo, e só o botão que o ativa no lugar
+      certo!<br>
+    </p>
+
+
+
+
+
+  </div>
+  <hr>
+  <div class="container">
+    <h2>Paginations e Placeholder</h2>
+    <p>Paginations - são tipo um butonGrup, que serve pra gente ficar indo de pagina pra pagina</p>
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <p>Muito simples, após isso, só configurar certinho pra colocar as paginas certinhas<br>
+      dai é só mudar cores, tamanho e alinhamento</p>
+    <hr>
+    <h3>Placeholder</h3>
+    <p>Serve pra mostrar as coisas quando estão sendo carregadas, por exemplo, quando estamos puxando informações de um
+      banco de Dados, podemos usar o placeholder, para mostrar que os dados estão carregando<br>
+      É muito facil usar, é só colocar nas class das coisas, o termo "placeholder", que ai, quando algo for carregar,
+      ele vai aparecer o efeito
+
+    </p>
+
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
+          content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
+    </div>
+
+    <div class="card" aria-hidden="true">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title placeholder-glow">
+          <span class="placeholder col-6"></span>
+        </h5>
+        <p class="card-text placeholder-glow">
+          <span class="placeholder col-7"></span>
+          <span class="placeholder col-4"></span>
+          <span class="placeholder col-4"></span>
+          <span class="placeholder col-6"></span>
+          <span class="placeholder col-8"></span>
+        </p>
+        <a class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
+      </div>
+    </div>
+    <br><br>
+    <p>Muito simples, olha o exemplo aqui:<br>
+      Esse aqui é antes de ser carregado<br>
+      div class="card-body"><br>
+      h5 class="card-title">Card title h5><br>
+      Esse aqui vai ser enquanto estiver sendo carregando<br>
+      div class="card-body"><br>
+      h5 class="card-title placeholder-glow"><br>
+      Só adicionamos o placeholder e tudo certo
+    </p>
+
+  </div>
+  <hr>
+  <div class="container">
+    <h2>Popovers</h2>
+    <p>Balão na pagina</p>
+    <p>Muito simples, é tipo um balão que dar algum mini aviso ou alguma mini instrução de algo</p>
+    <span style="color: black;" class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus"
+      data-bs-title="Titulo do popover" data-bs-content="Conteudo desse popover">
+      <button class="btn btn-primary" type="button" disabled>Disabled button</button>
+    </span>
+    <p>Detalhe sobre o popover, precisamos ativalos, via js antes de utilização, la no doc do boot tem o comando<br>
+      O titulo do popover e o conteudo, fica dentro do codigo, exemplo :<br>
+      data-bs-content="conteudo aqui"> = pra colocar o conteudo <br>
+      data-bs-title="Titulo aqui, se quiser" = pra colocar o titulo
+    </p>
+    <p>Uma dica de uso é usar ele pra fazer tutorial em paginas, assim, vc explica cada funcionalidade do site, por exemplo!</p>
+  </div>
+  <hr>
+  <div class="container">
+    <h2>Progress Bar</h2>
+    <p>Barra de progresso</p>
+    <p>Muito simples, veja aqui, um com animação;</p>
+    <div class="progress w-50" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar progress-bar-striped progress-bar-animated w-50"></div>
+</div>
+<p>Temos alguns detalhes sobre o uso, primeiro, a % da barra que esta pintada, deve ser passada dentro da classe, usando "w-+(o numero dentre o minimo e o maximo)"<br>
+o aria-valuenow - serve mais pro programador usar ali no back, do que pra de fato pintar a barra <br>
+Claro, posso customizar, os taamnhos e cores da barra
+</p>
+  </div>
+<hr>
+<div class="container">
+  <h2>Scroolspy</h2>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div>
+        Aqui é o corpo do offCanvas, em que podemos colocar o que quiser, podemos fazer um menu, por exemplo, que
+        apareça opções aqui
+      </div>
+      <div class="dropdown mt-3">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+          Dropdown button
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
       </div>
     </div>
   </div>
-</div>
-<hr>
-
-<p>Se eu quiser chamar um Modal, usando links, tenho que colocar assim<br>
-a href="#exampleModal" data-bs-toggle="modal" - isso claro, fora a class, é ali no href, eu coloco o id dql do Modal que eu quero que aparece, mas tenho que usar o # junto</p>
-<a href="#exampleModal" data-bs-toggle="modal" class="btn btn-primary btn-lg p-3 me-3"
-              style="background-color: blueviolet; border:none">Ativar Modal, com link!</a>
-<hr>
-<p>Fazer com que um Modal, apareça, com um determinado tempo!<br>
-
-
-</p>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        teste
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          teste
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+
 
 
 
@@ -623,6 +820,17 @@ a href="#exampleModal" data-bs-toggle="modal" - isso claro, fora a class, é ali
     integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
     crossorigin="anonymous"></script>
   <script>
+
+    //Pra ativar os popovers
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+    const Modal = new bootstrap.Modal(document.getElementById('staticBackdrop'), {});
+
+    //Pra aparecer dps de um certo tempo
+    // setTimeout(function() {Modal.show();}, 10000)
+
+
     function mostrarAlerta() {
       var alerta = document.getElementById('alerta');
       alerta.classList.toggle('d-none')
