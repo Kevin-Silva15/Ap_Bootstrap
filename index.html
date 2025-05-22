@@ -9,7 +9,7 @@
   <title>Apredendo Bootstrap!</title>
 </head>
 
-<body class="bg-dark" style="color:white;">
+<body data-bs-spy="scroll" data-bs-target="#navbar-example2" class="bg-dark" style="color:white;">
   <p>Aula 1 - navbar e alterar cores!</p>
   <nav class="navbar navbar-expand navbar-dark bg-primary " aria-label="Second navbar example">
     <div class="container"> <a class="navbar-brand" href="#">Always expand</a> <button class="navbar-toggler"
@@ -716,8 +716,8 @@
     <h2>Popovers</h2>
     <p>Balão na pagina</p>
     <p>Muito simples, é tipo um balão que dar algum mini aviso ou alguma mini instrução de algo</p>
-    <span style="color: black;" class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus"
-      data-bs-title="Titulo do popover" data-bs-content="Conteudo desse popover">
+    <span style="color: black;" class="d-inline-block" tabindex="0" data-bs-toggle="popover"
+      data-bs-trigger="hover focus" data-bs-title="Titulo do popover" data-bs-content="Conteudo desse popover">
       <button class="btn btn-primary" type="button" disabled>Disabled button</button>
     </span>
     <p>Detalhe sobre o popover, precisamos ativalos, via js antes de utilização, la no doc do boot tem o comando<br>
@@ -725,25 +725,96 @@
       data-bs-content="conteudo aqui"> = pra colocar o conteudo <br>
       data-bs-title="Titulo aqui, se quiser" = pra colocar o titulo
     </p>
-    <p>Uma dica de uso é usar ele pra fazer tutorial em paginas, assim, vc explica cada funcionalidade do site, por exemplo!</p>
+    <p>Uma dica de uso é usar ele pra fazer tutorial em paginas, assim, vc explica cada funcionalidade do site, por
+      exemplo!</p>
   </div>
   <hr>
   <div class="container">
     <h2>Progress Bar</h2>
     <p>Barra de progresso</p>
     <p>Muito simples, veja aqui, um com animação;</p>
-    <div class="progress w-50" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar progress-bar-striped progress-bar-animated w-50"></div>
-</div>
-<p>Temos alguns detalhes sobre o uso, primeiro, a % da barra que esta pintada, deve ser passada dentro da classe, usando "w-+(o numero dentre o minimo e o maximo)"<br>
-o aria-valuenow - serve mais pro programador usar ali no back, do que pra de fato pintar a barra <br>
-Claro, posso customizar, os taamnhos e cores da barra
+    <div class="progress w-50" role="progressbar" aria-label="Animated striped example" aria-valuenow="75"
+      aria-valuemin="0" aria-valuemax="100">
+      <div class="progress-bar progress-bar-striped progress-bar-animated w-50"></div>
+    </div>
+    <p>Temos alguns detalhes sobre o uso, primeiro, a % da barra que esta pintada, deve ser passada dentro da classe,
+      usando "w-+(o numero dentre o minimo e o maximo)"<br>
+      o aria-valuenow - serve mais pro programador usar ali no back, do que pra de fato pintar a barra <br>
+      Claro, posso customizar, os taamnhos e cores da barra
+    </p>
+  </div>
+  <hr>
+  <div class="container">
+    <h2>Scroolspy</h2>
+    <p>São aqueles botão que escrollam a sua pagina de acordo aonde vc aperta!</p>
+    <p>Podemos usar isso com menus, ou buttonGroups, navbar laterais etc.<br>
+      Boa dica de uso é, pra um livro digital, ou uma pagina que tenha documentação</p>
+
+
+  </div>
+  <hr>
+  <div class="container">
+    <h2>Spinner</h2>
+    <p>icones de carregamento giratorio</p>
+    <div class="d-flex justify-content-center ">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    <p>Muito facil para usar, só pegar la, e personalizar tamanho, cores e alinhamento<br>
+    </p>
+  </div>
+  <hr>
+  <div class="container">
+    <h2>Toast</h2>
+    <p>Mensagens tipo push, pra notificar algo</p>
+    <p>Precisamos codificar o js, pra linkar o botão com o Toast, coloquei o codigo lá em baixo, é bem simples e ja vem
+      pronto na pagina do boot<br>
+      Lembrar de se atentar aos id dos botão e do toats, pra confirmar que esteja certo<br>
+      Lembrando que, como o modal e o offcanvas, a personalização do Toast tbm pode estar separado do botão, podendo
+      ficar lá perto do fim do body<br>
+      Podemos tbm passar um delay, pro Toast se fechar sozinho, é sou adicinar "data-bs-delay="10000"", que com isso
+      conseguimos colocar um tempo pra ficar ativo<br>
+      Outra coisa, asssim como aprendemos com o modal, podemos fazer ele ficar em um "loop", disparando sozinho a cada x
+      tempo! </p>
+
+    <button type="button" class="btn btn-primary" id="liveToastBtn">Disparar o Toast</button>
+
+
+  </div>
+  <hr>
+  <div class="container">
+    <h2>Tooltip e Helpers</h2>
+    <p>Como se fosse um legenda, pra algo, parece os popover, mas são menores</p>
+    <p>Praa ussar isso, basta colocar o code js, que o doc do boot ja fornece<br>
+      Depois disso é facil, é so passar o "data-bs-toggle" como "tooltip", depois passar "data-bs-placement" (aqui o
+      lado que vc quer que apareca o tooltip)<br>
+      e por ultimo, o "title", e o tooltip aceita html dentro dele.
+    </p>
+    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top"
+      data-bs-title="Legendinha pras ajudar as coisas">
+      Tooltip no topo
+    </button>
+    <p>La no boot, posso colocar em outras direções e tals</p>
+  </div>
+  <hr>
+  <div class="container">
+ <h1 style="text-align: center;">Entrandos na aba dos Helpers</h1>
+ <p>Não tem muito segredo, é apenas uma ajudinha com algumas coisas que quisermos tratar, cores, alinhamentos e por ai vai, só dar uma olhada lá, que ja vai ser util</p>
+  </div>
+  <div class="container">
+ <h1 style="text-align: center;">Entrandos na aba dos Utilites e Icons</h1>
+ <p>Parecido com a aba de Helpers, tem varias coisas uteis lá</p>
+ <p>O que achei mais util foi as abas de:<br>
+Border  /  Display / flex 
 </p>
   </div>
+<h1 style="text-align: center;">Desbravar mais a aba de utilites depois</h1>
 <hr>
 <div class="container">
-  <h2>Scroolspy</h2>
-  
+  <h2>Icons</h2>
+  <p>O proprio bootstrap, tem uma biblioteca de icons, para podermos usar</p>
+  <p>Trara icons eu ja sei, não muda nada aqui usando boot!</p>
 </div>
 
 
@@ -762,10 +833,19 @@ Claro, posso customizar, os taamnhos e cores da barra
 
 
 
-
-
-
-
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <img src="..." class="rounded me-2" alt="...">
+        <strong class="me-auto">Titulo..</strong>
+        <small>now (aqui vai uma variavel para informar o tempo)</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div style="color: black;" class="toast-body">
+        <p>Opa, aqui é o corpo do toats</p>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -821,6 +901,10 @@ Claro, posso customizar, os taamnhos e cores da barra
     crossorigin="anonymous"></script>
   <script>
 
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+
     //Pra ativar os popovers
     const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
     const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
@@ -835,6 +919,19 @@ Claro, posso customizar, os taamnhos e cores da barra
       var alerta = document.getElementById('alerta');
       alerta.classList.toggle('d-none')
     }
+
+    const toastTrigger = document.getElementById('liveToastBtn')
+    const toastLiveExample = document.getElementById('liveToast')
+
+    if (toastTrigger) {
+      const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+      toastTrigger.addEventListener('click', () => {
+        toastBootstrap.show()
+      })
+    }
+
+
+
   </script>
 </body>
 
